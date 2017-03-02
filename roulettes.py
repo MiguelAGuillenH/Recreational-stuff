@@ -25,13 +25,13 @@ def hypocycloid(r,k,color1='blue',color2='red'):
 def epicycloid(r,k,color1='blue',color2='red'):
   t.reset()
   t.hideturtle()
-  #Circulo externo
+  #Big inner circle
   t.color(color1)
   t.penup()
   t.setpos(0,-r*k)
   t.pendown()
   t.circle(r*k)
-  #Epicicloide
+  #Epicycloid
   t.color(color2)
   t.penup()
   for theta in range(3600):
@@ -44,13 +44,13 @@ def epicycloid(r,k,color1='blue',color2='red'):
 def hypotrochoid(R,r,d,color1='blue',color2='red'):
   t.reset()
   t.hideturtle()
-  #Circulo externo
+  #Big outer circle
   t.color(color1)
   t.penup()
   t.setpos(0,-R)
   t.pendown()
   t.circle(R)
-  #Hipotrocoide
+  #Hipotrochoid
   t.color(color2)
   t.penup()
   for theta in range(3600):
@@ -63,13 +63,13 @@ def hypotrochoid(R,r,d,color1='blue',color2='red'):
 def epitrochoid(R,r,d,color1='blue',color2='red'):
   t.reset()
   t.hideturtle()
-  #Circulo externo
+  #Big inner circle
   t.color(color1)
   t.penup()
   t.setpos(0,-R)
   t.pendown()
   t.circle(R)
-  #Epitrocoide
+  #Epitrochoid
   t.color(color2)
   t.penup()
   for theta in range(3600):
@@ -78,6 +78,3 @@ def epitrochoid(R,r,d,color1='blue',color2='red'):
     y = (R+r)*m.sin(theta) - d*m.sin(((R+r)/r)*theta)
     t.setpos(x,y)
     t.pendown()
-    
-hipocicloide(30,2)
-
